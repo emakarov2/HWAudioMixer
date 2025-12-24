@@ -1030,6 +1030,7 @@ GameObject:
   m_Component:
   - component: {fileID: 370193799}
   - component: {fileID: 370193800}
+  - component: {fileID: 370193801}
   m_Layer: 5
   m_Name: MusicSlider
   m_TagString: Untagged
@@ -1111,6 +1112,22 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &370193801
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 370193798}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80f87b30ce1711e46be0ebc7db8daf9a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _mainMixer: {fileID: 24100000, guid: 1ea1effa282e54b4482191ed9d2ddc4e, type: 2}
+  _slider: {fileID: 370193800}
+  _muteToggleHandler: {fileID: 566881662}
+  _mixerGroup: {fileID: -2585248021434390044, guid: 1ea1effa282e54b4482191ed9d2ddc4e, type: 2}
 --- !u!1 &371626123
 GameObject:
   m_ObjectHideFlags: 0
@@ -1234,6 +1251,7 @@ GameObject:
   - component: {fileID: 566881661}
   - component: {fileID: 566881660}
   - component: {fileID: 566881659}
+  - component: {fileID: 566881662}
   m_Layer: 5
   m_Name: MuteButton
   m_TagString: Untagged
@@ -1343,6 +1361,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 566881657}
   m_CullTransparentMesh: 1
+--- !u!114 &566881662
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 566881657}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 164a822611988de468d9fcc342dad044, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _mainMixer: {fileID: 24100000, guid: 1ea1effa282e54b4482191ed9d2ddc4e, type: 2}
+  _button: {fileID: 566881659}
+  _mixerGroup: {fileID: 24300002, guid: 1ea1effa282e54b4482191ed9d2ddc4e, type: 2}
+  _volumeSlider: {fileID: 1756961702}
 --- !u!1 &596495589
 GameObject:
   m_ObjectHideFlags: 0
@@ -1355,6 +1389,7 @@ GameObject:
   - component: {fileID: 596495593}
   - component: {fileID: 596495592}
   - component: {fileID: 596495591}
+  - component: {fileID: 596495594}
   m_Layer: 5
   m_Name: ButtonRun
   m_TagString: Untagged
@@ -1464,6 +1499,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 596495589}
   m_CullTransparentMesh: 1
+--- !u!114 &596495594
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 596495589}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5f912cceb0e8b64f8262e91e567215d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _SFXSource: {fileID: 1816895705}
+  _clip: {fileID: 8300000, guid: 7ab0129b800a0714caef2253a6b94190, type: 3}
+  _button: {fileID: 596495591}
 --- !u!1 &648567492
 GameObject:
   m_ObjectHideFlags: 0
@@ -1474,6 +1524,7 @@ GameObject:
   m_Component:
   - component: {fileID: 648567493}
   - component: {fileID: 648567494}
+  - component: {fileID: 648567495}
   m_Layer: 5
   m_Name: SFXSlider
   m_TagString: Untagged
@@ -1555,6 +1606,22 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &648567495
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 648567492}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80f87b30ce1711e46be0ebc7db8daf9a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _mainMixer: {fileID: 24100000, guid: 1ea1effa282e54b4482191ed9d2ddc4e, type: 2}
+  _slider: {fileID: 648567494}
+  _muteToggleHandler: {fileID: 566881662}
+  _mixerGroup: {fileID: 6686008891190398976, guid: 1ea1effa282e54b4482191ed9d2ddc4e, type: 2}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -2561,7 +2628,7 @@ GameObject:
   - component: {fileID: 1396423991}
   - component: {fileID: 1396423990}
   m_Layer: 0
-  m_Name: AudioService
+  m_Name: BackGroundMusic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2580,19 +2647,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _mainMixer: {fileID: 24100000, guid: 1ea1effa282e54b4482191ed9d2ddc4e, type: 2}
-  _masterSlider: {fileID: 1756961702}
-  _musicSlider: {fileID: 370193800}
-  _sfxSlider: {fileID: 648567494}
-  _muteButton: {fileID: 566881659}
-  _soundAK47Button: {fileID: 1614315143}
-  _soundConnectButton: {fileID: 1644241921}
-  _soundRunButton: {fileID: 596495591}
   _musicSource: {fileID: 331357647}
   _sfxSource: {fileID: 1816895705}
   _backgroundMusic: {fileID: 8300000, guid: 764708b5c14a3de4e898e953d37565ca, type: 3}
-  _soundAK47: {fileID: 8300000, guid: ffeebafed3a165f4a84b482f65591cfb, type: 3}
-  _soundConnect: {fileID: 8300000, guid: 5659750786597494fac255030b418cf8, type: 3}
-  _soundRun: {fileID: 8300000, guid: 7ab0129b800a0714caef2253a6b94190, type: 3}
 --- !u!4 &1396423991
 Transform:
   m_ObjectHideFlags: 0
@@ -2731,6 +2788,7 @@ GameObject:
   - component: {fileID: 1614315145}
   - component: {fileID: 1614315144}
   - component: {fileID: 1614315143}
+  - component: {fileID: 1614315146}
   m_Layer: 5
   m_Name: ButtonAK
   m_TagString: Untagged
@@ -2840,6 +2898,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1614315141}
   m_CullTransparentMesh: 1
+--- !u!114 &1614315146
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1614315141}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5f912cceb0e8b64f8262e91e567215d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _SFXSource: {fileID: 1816895705}
+  _clip: {fileID: 8300000, guid: ffeebafed3a165f4a84b482f65591cfb, type: 3}
+  _button: {fileID: 1614315143}
 --- !u!1 &1616431626
 GameObject:
   m_ObjectHideFlags: 0
@@ -2927,6 +3000,7 @@ GameObject:
   - component: {fileID: 1644241923}
   - component: {fileID: 1644241922}
   - component: {fileID: 1644241921}
+  - component: {fileID: 1644241924}
   m_Layer: 5
   m_Name: ButtonAndroid
   m_TagString: Untagged
@@ -3036,6 +3110,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1644241919}
   m_CullTransparentMesh: 1
+--- !u!114 &1644241924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1644241919}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5f912cceb0e8b64f8262e91e567215d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _SFXSource: {fileID: 1816895705}
+  _clip: {fileID: 8300000, guid: 5659750786597494fac255030b418cf8, type: 3}
+  _button: {fileID: 1644241921}
 --- !u!1 &1756961700
 GameObject:
   m_ObjectHideFlags: 0
@@ -3046,6 +3135,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1756961701}
   - component: {fileID: 1756961702}
+  - component: {fileID: 1756961703}
   m_Layer: 5
   m_Name: MasterSlider
   m_TagString: Untagged
@@ -3127,6 +3217,22 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1756961703
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1756961700}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80f87b30ce1711e46be0ebc7db8daf9a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _mainMixer: {fileID: 24100000, guid: 1ea1effa282e54b4482191ed9d2ddc4e, type: 2}
+  _slider: {fileID: 1756961702}
+  _muteToggleHandler: {fileID: 566881662}
+  _mixerGroup: {fileID: 24300002, guid: 1ea1effa282e54b4482191ed9d2ddc4e, type: 2}
 --- !u!1 &1816895704
 GameObject:
   m_ObjectHideFlags: 0
